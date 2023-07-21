@@ -1,0 +1,125 @@
+<table border="1" class="dataframe">
+    <thead>
+      <tr style="text-align: right;">
+        <th></th>
+        <th>2018</th>
+        <th>2019</th>
+        <th>2022</th>
+      </tr>
+      <tr>
+        <th>Curso</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Administração</th>
+        <td>-8.75%</td>
+        <td>-26.94%</td>
+        <td>12.59%</td>
+      </tr>
+      <tr>
+        <th>Arquitetura e urbanismo</th>
+        <td>-13.22%</td>
+        <td>-5.16%</td>
+        <td>4.29%</td>
+      </tr>
+      <tr>
+        <th>Artes cênicas</th>
+        <td>-1.56%</td>
+        <td>-12.97%</td>
+        <td>5.96%</td>
+      </tr>
+      <tr>
+        <th>Bioinformática</th>
+        <td>-12.6%</td>
+        <td>-4.65%</td>
+        <td>26.14%</td>
+      </tr>
+      <tr>
+        <th>Bioquímica</th>
+        <td>-15.26%</td>
+        <td>5.81%</td>
+        <td>1.6%</td>
+      </tr>
+      <tr>
+        <th>Ciência e engenharia de materiais</th>
+        <td>-8.89%</td>
+        <td>-4.83%</td>
+        <td>0.1%</td>
+      </tr>
+      <tr>
+        <th>Ciência, tecnologia e inovação</th>
+        <td>-2.07%</td>
+        <td>-14.33%</td>
+        <td>-3.26%</td>
+      </tr>
+      <tr>
+        <th>Ciências da saúde</th>
+        <td>-18.41%</td>
+        <td>-8.11%</td>
+        <td>-5.21%</td>
+      </tr>
+      <tr>
+        <th>Ciências odontológicas</th>
+        <td>5.22%</td>
+        <td>-15.98%</td>
+        <td>12.7%</td>
+      </tr>
+      <tr>
+        <th>Design</th>
+        <td>-19.1%</td>
+        <td>0.16%</td>
+        <td>3.2%</td>
+      </tr>
+      <tr>
+        <th>Engenharia civil</th>
+        <td>-12.92%</td>
+        <td>-4.79%</td>
+        <td>-3.47%</td>
+      </tr>
+      <tr>
+        <th>Engenharia de software</th>
+        <td>-10.29%</td>
+        <td>-15.08%</td>
+        <td>0.16%</td>
+      </tr>
+      <tr>
+        <th>Filosofia</th>
+        <td>-5.62%</td>
+        <td>-13.43%</td>
+        <td>7.33%</td>
+      </tr>
+      <tr>
+        <th>Gestão da informação e do conhecimento</th>
+        <td>-16.55%</td>
+        <td>-6.35%</td>
+        <td>4.74%</td>
+      </tr>
+    </tbody>
+  </table><script>
+      function applyColorsToValues() {
+          const table = document.querySelector('.dataframe');
+          const rows = table.querySelectorAll('tr');
+  
+          for (let i = 1; i < rows.length; i++) {
+              const cells = rows[i].querySelectorAll('td');
+  
+              for (let j = 0; j < cells.length; j++) {
+                  const cellValue = parseFloat(cells[j].innerText);
+  
+                  if (cellValue >= 0) {
+                      cells[j].style.color = 'green';
+                  } else {
+                      cells[j].style.color = 'red';
+                  }
+              }
+          }
+      }
+  
+      window.onload = function() {
+          applyColorsToValues();
+      };
+  </script>
